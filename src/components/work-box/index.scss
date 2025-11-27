@@ -36,6 +36,14 @@
       width: 30%;
     }
   }
+  .small-logo {
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
+    img {
+      width: 22%;
+    }
+  }
   @media screen and (max-width: 1024px) {
     min-height: 34.375rem;
     .logo {

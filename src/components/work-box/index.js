@@ -18,7 +18,7 @@ const WorkBox = ({ work }) => {
         <div className="id">{work.id}</div>
         <div>{work.name}</div>
       </div>
-      <div className="logo">
+      <div className={`${work.width === "full" ? "small-logo" : "logo"}`}>
         <img src={work.logo} alt={work.name} />
       </div>
       <div className="bottom-line">

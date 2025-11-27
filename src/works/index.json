@@ -12,13 +12,13 @@
   },
   {
     "id": "02",
-    "name": "Yeldo",
-    "info": "Company Project (Apr 2022 - In progress)",
-    "logo": "/assets/yeldo-logo.webp",
-    "link": "https://www.yeldo.com",
+    "name": "AQ Personal Trainer",
+    "info": "Freelance Project (Oct 2024 - Dec 2024)",
+    "logo": "/assets/aq-logo-gray.webp",
+    "link": "https://www.alessioquattrottopt.it/",
     "bgcolor": "#3b3b3b",
     "textcolor": "#eaeaea",
-    "bordercolor": "#8334cd",
+    "bordercolor": "#550000",
     "width": "half"
   },
   {
@@ -34,13 +34,13 @@
   },
   {
     "id": "04",
-    "name": "AQ Personal Trainer",
-    "info": "Freelance Project (Oct 2024 - In progress)",
-    "logo": "/assets/aq-logo-gray.webp",
-    "link": "https://www.alessioquattrottopt.it/",
+    "name": "Siamo Qui",
+    "info": "Freelance Project (Feb 2025 - Jun 2025)",
+    "logo": "/assets/siamoqui.webp",
+    "link": "https://siamoqui.retenmg.it/",
     "bgcolor": "#3b3b3b",
     "textcolor": "#eaeaea",
-    "bordercolor": "#550000",
+    "bordercolor": "#f08a16",
     "width": "half"
   }
 ]
