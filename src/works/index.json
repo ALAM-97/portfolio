@@ -42,5 +42,16 @@
     "textcolor": "#eaeaea",
     "bordercolor": "#f08a16",
     "width": "half"
+  },
+    {
+    "id": "05",
+    "name": "Giftando",
+    "info": "Personal Start-Up",
+    "logo": "/assets/giftando-app.png",
+    "link": "https://giftando.app/",
+    "bgcolor": "#3b3b3b",
+    "textcolor": "#eaeaea",
+    "bordercolor": "#19a950",
+    "width": "full"
   }
 ]
