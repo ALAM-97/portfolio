@@ -1,6 +1,14 @@
 import "./index.scss";
 
-const Button = ({ text, icon, link }) => {
+const Button = ({ text, icon, link, download }) => {
+  if (download) {
+    return (
+      <a className="AppButton" href={link} download>
+        <p>{text}</p>
+        {icon}
+      </a>
+    );
+  }
   const handleClick = () => {
     window.open(link, "_blank");
   };

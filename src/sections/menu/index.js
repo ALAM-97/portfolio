@@ -10,26 +10,18 @@ const Menu = () => {
       <div className="links">
         <div className="link-1">
           <AppLink
-            type="light"
-            text="Lavori"
-            icon={"code_blocks"}
-            anchor={"my-work"}
-          />
-        </div>
-        <div className="link-2">
-          <AppLink
-            type="dark"
-            text="Su di me"
-            icon={"assignment_ind"}
-            anchor={"about-me"}
-          />
-        </div>
-        <div className="link-3">
-          <AppLink
             type="dark"
             text="CV"
             icon={"description"}
             anchor={"curriculum-vitae"}
+          />
+        </div>
+        <div className="link-3">
+          <AppLink
+            type="mid"
+            text="Progetti"
+            icon={"code_blocks"}
+            anchor={"my-work"}
           />
         </div>
         <div className="link-4">

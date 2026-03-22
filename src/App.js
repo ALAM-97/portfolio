@@ -1,5 +1,4 @@
 import "./App.css";
-import AboutMe from "./sections/about-me";
 import ContactMe from "./sections/contact-me";
 import CurriculumVitae from "./sections/curriculum-vitae";
 import Footer from "./sections/footer";
@@ -16,9 +15,8 @@ function App() {
         <Menu />
       </div>
       <WhatIDo id="about-me" />
-      <AboutMe />
-      <MyWork id="my-work" />
       <CurriculumVitae id="curriculum-vitae" />
+      <MyWork id="my-work" />
       <ContactMe id="contact-me" />
       <Footer />
     </div>
