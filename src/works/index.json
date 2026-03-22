@@ -4,54 +4,59 @@
     "name": "No Digital Brain",
     "info": "Freelance Project (Dec 2024 - Jan 2025)",
     "logo": "/assets/logo-ndb.webp",
-    "link": "https://ndb-preventivatore.vercel.app/",
+    "link": null,
     "bgcolor": "#3b3b3b",
     "textcolor": "#eaeaea",
     "bordercolor": "#aa09aa",
-    "width": "half"
+    "width": "half",
+    "description": "Questo progetto sviluppato per No Digital Brain è un'applicazione web pensata per gestire l'intero ciclo di vita dei preventivi aziendali. L'idea di fondo è semplice: avere un unico posto dove tenere traccia dei clienti, dei servizi offerti e di tutti i preventivi inviati, con la possibilità di esportarli in PDF e monitorarne lo stato nel tempo (da \"non inviato\" fino ad \"accettato\" o \"rifiutato\").\n\nDal punto di vista tecnico, il progetto è costruito su Next.js 15 con App Router, usando TypeScript e React 18. L'interfaccia è stilizzata con Tailwind CSS e si appoggia a Radix UI per i componenti interattivi come dialog, select e tab. I form sono gestiti con React Hook Form e validati tramite Zod.\n\nIl backend vive all'interno dello stesso progetto Next.js tramite API Routes, con NextAuth.js che si occupa dell'autenticazione attraverso sessioni JWT. I dati sono salvati su un database PostgreSQL hostato su Neon, accessibile tramite Prisma come ORM. Per l'invio delle email (ad esempio il reset della password) viene usato Resend, mentre la generazione dei PDF dei preventivi è affidata a pdf-lib.\n\nL'architettura segue le convenzioni moderne di Next.js: Server Components per il rendering lato server, Server Actions per le chiamate dati, e un Context globale con pattern Reducer per gestire lo stato dell'applicazione (clienti, servizi, preventivi). L'accesso è protetto da un middleware che verifica il token JWT e controlla il ruolo dell'utente — attualmente solo gli utenti con ruolo \"Admin\" possono accedere alle funzionalità principali."
   },
   {
     "id": "02",
-    "name": "AQ Personal Trainer",
+    "name": "Kairos Studio",
     "info": "Freelance Project (Oct 2024 - Dec 2024)",
     "logo": "/assets/aq-logo-gray.webp",
     "link": null,
     "bgcolor": "#3b3b3b",
     "textcolor": "#eaeaea",
     "bordercolor": "#550000",
-    "width": "half"
+    "width": "half",
+    "description": "Kairos Studio è un'applicazione web pensata per personal trainer e studi fitness, che permette di gestire in modo centralizzato clienti, appuntamenti e abbonamenti.\n\nIl punto di ingresso dell'applicazione è un flusso di onboarding guidato: il cliente compila prima i propri dati personali (nome, contatti, dati fisici) e poi un'anamnesi dettagliata con informazioni su infortuni pregressi, periodi di inattività, sport praticati e obiettivi. Una volta completata la registrazione, il trainer può accedere alla dashboard e gestire tutto da lì.\n\nLa dashboard offre una panoramica rapida con statistiche aggregate — ore lavorate, numero di clienti attivi, incassi totali e importi ancora da riscuotere — e una tabella con tutti i clienti, filtrabile e ordinabile. Ogni cliente ha una scheda dedicata che mostra il suo storico di appuntamenti e abbonamenti, con la possibilità di creare nuove sessioni, modificare quelle esistenti, registrare i pagamenti e tenere traccia delle sedute incluse in un pacchetto.\n\nSul piano tecnico, l'applicazione è costruita con Next.js 14 (App Router) e React 18 in TypeScript. Lo styling è interamente gestito con TailwindCSS, mentre i componenti dell'interfaccia seguono il pattern shadcn/ui basato su Radix UI. Le tabelle dati più complesse fanno uso di TanStack React Table. Il database è PostgreSQL, interrogato tramite l'ORM Prisma, con le API esposte direttamente tramite le route server di Next.js."
   },
   {
     "id": "03",
     "name": "Sanimedica",
     "info": "Freelance Project (Mar 2024 - Jun 2024)",
     "logo": "/assets/Sanimedica-logo-white.webp",
-    "link": "https://gestionaleamministrativosanimedica-gruppo-sanimedica.vercel.app/",
+    "link": null,
     "bgcolor": "#3b3b3b",
     "textcolor": "#eaeaea",
     "bordercolor": "#037c92",
-    "width": "half"
+    "width": "half",
+    "description": "Sanimedica è un gestionale amministrativo sviluppato per un'azienda italiana che opera nel settore sanitario. Il suo scopo principale è gestire la rendicontazione e la fatturazione degli operatori sanitari — infermieri, fisioterapisti e altre figure professionali — che erogano prestazioni per conto di ASL distribuite sul territorio nazionale.\n\nIl flusso di lavoro copre l'intero ciclo operativo: si parte dall'importazione dei dati degli operatori tramite file CSV, si passa alla registrazione degli accessi e delle prestazioni effettuate nel mese, al calcolo automatico degli importi sulla base di tariffe, plafond e tipologia di servizio, fino alla generazione delle fatture e all'esportazione di report Excel per la contabilità e le statistiche.\n\nIl backend espone un'API REST con autenticazione JWT e un sistema di permessi a quattro livelli — SuperAdmin, Admin, Rendicontazione e Fatturazione — che regola l'accesso alle diverse funzionalità. I moduli principali coprono l'autenticazione, la rendicontazione mensile con prezzi dinamici per operatore, la fatturazione con gestione dei bonus e degli accessi mancanti, e le note operative con possibilità di renderle persistenti nel tempo.\n\nIl frontend è sviluppato con Next.js 14 usando l'App Router e TypeScript. Per lo stile si utilizzano Tailwind CSS e moduli SCSS, mentre Headless UI e Heroicons forniscono i componenti di interfaccia. Le animazioni sono gestite da Framer Motion e le notifiche toast da Sonner. Lo stato dell'applicazione è gestito tramite la Context API di React, con due contesti principali: uno per l'autenticazione e uno per lo stato globale dell'app (operatori caricati, città e periodo selezionato).\n\nLa navigazione è protetta da un HOC authOnly che, ad ogni accesso a una pagina riservata, verifica la validità del token JWT e il ruolo dell'utente, reindirizzando al login in caso contrario. Le pagine principali sono la homepage, da cui si seleziona il mese, l'anno e la città di riferimento e si caricano i CSV; la pagina di rendicontazione, per la gestione dei record degli operatori; la pagina dei conteggi, con i dettagli della fatturazione filtrabili e consultabili in modale; il riepilogo operatori, con lo stato dei pagamenti; le statistiche, con dati aggregati per ASL esportabili in Excel; e infine la gestione degli utenti, accessibile solo al SuperAdmin.\n\nArchitettura complessiva\nIl sistema segue una struttura client-server classica: il frontend Next.js comunica con il backend Express tramite chiamate REST autenticate con Bearer token, e il backend dialoga con il database PostgreSQL tramite Sequelize. L'intera applicazione è pensata per un uso multi-sede e multi-ruolo, con un workflow mensile ben definito che culmina nel congelamento dei dati a fine mese per garantire l'integrità della rendicontazione."
   },
   {
     "id": "04",
     "name": "Siamo Qui",
     "info": "Freelance Project (Feb 2025 - Jun 2025)",
     "logo": "/assets/siamoqui.webp",
-    "link": "https://siamoqui.retenmg.it/",
+    "link": null,
     "bgcolor": "#3b3b3b",
     "textcolor": "#eaeaea",
     "bordercolor": "#f08a16",
-    "width": "half"
+    "width": "half",
+    "description": "\u201cSiamo Qui\u201d è una piattaforma web pensata per semplificare la gestione dei servizi di accoglienza sociale in Italia. In pratica, mette in comunicazione due tipi di soggetti: da un lato le strutture che ospitano famiglie e minori in difficoltà (case famiglia, centri di accoglienza, ecc.), dall'altro i servizi sociali e gli enti pubblici che devono trovare una collocazione per queste persone.\n\nPrima di questa piattaforma, il processo di matching tra chi ha un posto disponibile e chi ne ha bisogno era gestito a telefonate e fogli Excel. Siamo Qui lo digitalizza: i servizi accoglienti registrano la propria struttura con tutte le informazioni rilevanti (quanti posti, se sono accreditati, se accettano emergenze, dove si trovano), i servizi invianti possono cercarli su una mappa, filtrare per municipio o per tipologia, e inserire richieste in lista d'attesa. Gli amministratori del sistema approvano le iscrizioni e hanno una visione d'insieme di tutto ciò che accade sulla piattaforma.\n\nDal punto di vista tecnico è un'applicazione Next.js moderna con App Router, scritta in TypeScript e stilizzata con Tailwind CSS. Il database è PostgreSQL, gestito tramite Prisma come ORM. L'autenticazione è basata su NextAuth.js con tre ruoli distinti (Admin, Servizio Accogliente, Servizio Inviante), e ogni ruolo vede una dashboard completamente diversa. Le email transazionali (approvazioni, reset password) vengono inviate tramite Resend. C\u2019è anche integrazione con Google Maps per geocodificare gli indirizzi e mostrarli su mappa, e la possibilità di esportare dati in PDF o Excel."
   },
   {
     "id": "05",
     "name": "Giftando",
-    "info": "Personal Start-Up",
+    "info": "Personal Project",
     "logo": "/assets/giftando-app-big.png",
     "link": "https://giftando.app/",
     "bgcolor": "#3b3b3b",
     "textcolor": "#eaeaea",
     "bordercolor": "#19a950",
-    "width": "full"
+    "width": "full",
+    "description": "Giftando nasce come un esperimento personale: volevo capire fino a dove l'intelligenza artificiale fosse arrivata e cosa potesse davvero fare nel processo di sviluppo software. Ho scelto un'idea semplice — un'app per creare e condividere liste dei desideri — per concentrarmi sull'aspetto che mi interessava davvero: usare l'IA in ogni fase, dall'architettura al codice, e capirne i limiti.\n\nL'app permette agli utenti di costruire la propria lista di regali, organizzarla per evento (Natale, Compleanno, Matrimonio…) e condividerla tramite link. Chi visita la lista vede solo i regali ancora disponibili e può riservarne uno prima di comprarlo, evitando doppioni.\n\nSul piano tecnico ho usato Next.js con App Router, React e TypeScript per il frontend, PostgreSQL con Prisma come database, e NextAuth per l'autenticazione. La UI è costruita con Tailwind CSS, Radix UI e Shadcn, mentre React Query e React Hook Form gestiscono rispettivamente il fetching e i form."
   }
 ]
