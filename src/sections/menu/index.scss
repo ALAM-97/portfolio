@@ -22,7 +22,10 @@
       width: calc(50% - 0.3125rem);
     }
     .link-3 {
-      width: 100%;
+      width: calc(50% - 0.3125rem);
+    }
+    .link-4 {
+      width: calc(50% - 0.3125rem);
     }
   }
   @media screen and (max-width: 768px) {
@@ -43,7 +46,10 @@
         width: calc(50% - 0.3125rem);
       }
       .link-3 {
-        width: 100%;
+        width: calc(50% - 0.3125rem);
+      }
+      .link-4 {
+        width: calc(50% - 0.3125rem);
       }
     }
   }

@@ -26,6 +26,14 @@ const Menu = () => {
         </div>
         <div className="link-3">
           <AppLink
+            type="dark"
+            text="CV"
+            icon={"description"}
+            anchor={"curriculum-vitae"}
+          />
+        </div>
+        <div className="link-4">
+          <AppLink
             type="primary"
             text="Contattami"
             icon={"call"}
