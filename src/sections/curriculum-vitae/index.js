@@ -9,7 +9,7 @@ const CurriculumVitae = ({ id }) => {
         <div className="cv-title">Curriculum Vitae</div>
         <Button
           text="Scarica CV"
-          link="/cv-alessandro-amara.pdf"
+          link="/assets/cv-alessandro-amara.pdf"
           download
           icon={
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
