@@ -15,11 +15,11 @@
     "id": "02",
     "name": "Kairos Studio",
     "info": "Freelance Project (Oct 2024 - Dec 2024)",
-    "logo": "/assets/aq-logo-gray.webp",
+    "logo": "/assets/logo-kairos-white.svg",
     "link": null,
     "bgcolor": "#3b3b3b",
     "textcolor": "#eaeaea",
-    "bordercolor": "#550000",
+    "bordercolor": "#83865b",
     "width": "half",
     "description": "Kairos Studio è un'applicazione web pensata per personal trainer e studi fitness, che permette di gestire in modo centralizzato clienti, appuntamenti e abbonamenti.\n\nIl punto di ingresso dell'applicazione è un flusso di onboarding guidato: il cliente compila prima i propri dati personali (nome, contatti, dati fisici) e poi un'anamnesi dettagliata con informazioni su infortuni pregressi, periodi di inattività, sport praticati e obiettivi. Una volta completata la registrazione, il trainer può accedere alla dashboard e gestire tutto da lì.\n\nLa dashboard offre una panoramica rapida con statistiche aggregate — ore lavorate, numero di clienti attivi, incassi totali e importi ancora da riscuotere — e una tabella con tutti i clienti, filtrabile e ordinabile. Ogni cliente ha una scheda dedicata che mostra il suo storico di appuntamenti e abbonamenti, con la possibilità di creare nuove sessioni, modificare quelle esistenti, registrare i pagamenti e tenere traccia delle sedute incluse in un pacchetto.\n\nSul piano tecnico, l'applicazione è costruita con Next.js 14 (App Router) e React 18 in TypeScript. Lo styling è interamente gestito con TailwindCSS, mentre i componenti dell'interfaccia seguono il pattern shadcn/ui basato su Radix UI. Le tabelle dati più complesse fanno uso di TanStack React Table. Il database è PostgreSQL, interrogato tramite l'ORM Prisma, con le API esposte direttamente tramite le route server di Next.js."
   },
